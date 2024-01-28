@@ -21,6 +21,7 @@ Before working on the project you will need to do this
 After cloning the project to your local machine,
 
 - Install all the necessary dependencies (npm install)
+- navigate to the projects folder (cd 'name of the project')
 - Create a new branch for you to work on on the project
 - Work on any features you want on the created new branch
 
