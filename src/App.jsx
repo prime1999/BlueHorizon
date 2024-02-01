@@ -1,20 +1,24 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
+import RootLayout from "./layout/RootLayout";
+
+// pages
+import HomePage from "./pages/HomePage";
 
 function App() {
-    const [count, setCount] = useState(0);
+    const router = createBrowserRouter(
+        createRoutesFromElements(
+            <>
+                <Route path="/" element={<RootLayout />}>
+                    <Route index={true} path="/" element={<HomePage />} />
+                </Route>
+            </>,
+        ),
+    );
 
     return (
-        <div className="flex items-center justify-center h-screen">
-            <div>
-                <h1 className="font-nova text-3xl text-darkBlue">
-                    Blue<span className="text-blue">Horizon</span>
-                </h1>
-                <p className="font-kanit font-semibold text-red">Discover the World, Create Memories</p>
-            </div>
-        </div>
+        <>
+            <RouterProvider router={router}></RouterProvider>
+        </>
     );
 }
 

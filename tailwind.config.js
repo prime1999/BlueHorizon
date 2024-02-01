@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+    darkMode: ["class"],
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 
     theme: {
@@ -10,6 +11,7 @@ export default {
                 inter: ["Inter", "sans-serif"],
             },
             colors: {
+                black: "#09090B",
                 darkBlue: "#244D61",
                 blue: "#5689C0",
                 lightBlue: "#75E2FF",
